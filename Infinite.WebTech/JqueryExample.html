@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .p1 {
+            width: 200px;
+            height: 50px;
+            background-color: #808080;
+        }
+
+        .p2 {
+            width: 200px;
+            height: 200px;
+            background-color: #0094ff;
+        }
+
+        .txt {
+            border: 2px solid green;
+            font-family: Chiller;
+            font-size: 20px;
+        }
+    </style>
+    <link href="CSS/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.6.3.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnChange").click(function () {
+                $("#txtFN").addClass("txt");
+
+                $("#txtLN").css("background-color", "red");
+
+                $("#txtCity").css({ "background-color": "lightblue", "font-family": "Chiller", "font-size": "18px" });
+                flag = false;
+
+                //All at once
+                $("input").each(function () {
+                    $(this).addClass("txt");
+                });
+            });
+
+            //Append method
+            $("#btnAdd").click(function () {
+                //$("#table1").append("<tr><td>E1004</td><td>Kannan</td><td>Mumbai</td></tr>")
+                $("#table1").prepend("<tr><td>E1004</td><td>Kannan</td><td>Mumbai</td></tr>");
+            });
+
+            //Get Content from Non Visual Control
+            $("#btnGet").click(function () {
+                //var d1 = $("#d1").html();
+                var d1 = $("#d1").text();
+                alert(d1);
+            });
+            //Get Content from Visual COntrol
+            $("#btnSubmit").click(function () {
+                var fn = $("#txtFN").val();
+                var ln = $("#txtLN").val();
+                var ct = $("#txtCity").val();
+
+                //alert("First Name =" + fn + "\nLast Name =" + ln + "\nCity =" + ct);
+                $("#table1").append("<tr><td>" + fn + "</td><td>" + ln + "</td><td>" + ct + "</td></tr>");
+            });
+            ////remove a selected row
+            //$("#table1 tr").click(function () {
+            //    $(this).remove();
+            //});
+
+            //remove a selected row using button
+            $("#table1").on("click", "#btnDelete", function () {
+                $(this).closest("tr").remove();
+            });
+        });
+    </script>
+</head>
+<body class="m-5">
+    <div id="d1">This is a <b>Div</b> Add</div>
+    <button id="btnGet">Get Text from Div</button>
+    <hr />
+    <table>
+        <tr>
+            <td>
+                Employee Id <input id="txtFN" type="text" />
+            </td>
+            <td>
+                Name <input id="txtLN" type="text" />
+            </td>
+            <td>
+                City <input id="txtCity" type="text" />
+            </td>
+            <td>
+                <button id="btnChange">Change Color</button>
+            </td>
+            <td>
+                <button id="btnSubmit">Register</button>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-md-4">
+            <div class="h1">Employee Details</div>
+            <table id="table1" class="table table-bordered">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>E1001</td>
+                    <td>Jagan</td>
+                    <td>Chennai</td>
+                    <td>
+                        <button id="btnDelete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E1002</td>
+                    <td>Pradeep</td>
+                    <td>Bangalore</td>
+                    <td>
+                        <button id="btnDelete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E1003</td>
+                    <td>Sanjay</td>
+                    <td>Chennai</td>
+                    <td>
+                        <button id="btnDelete">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <button id="btnAdd">Add New Row</button>
+</body>
+</html>

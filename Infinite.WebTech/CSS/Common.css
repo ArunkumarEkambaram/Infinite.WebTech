@@ -1,0 +1,40 @@
+﻿.div1 {
+    width: 1000px;
+    height: 500px;
+    background-image: url("/Images/Amazfit.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    border: 1px solid;
+}
+
+a {
+    padding: 15px;
+    background-color: #ff6a00;
+    color: white;
+    text-decoration: none;
+}
+
+    a:hover {
+        background-color: #ff0000;
+        color: black;
+    }
+
+.div2 {
+    /*10px = 1em; 15px = 1.5em*/
+    margin-left: 1.5em;
+    margin-top: 2.5em;
+}
+/* p{
+            text-decoration:underline overline dashed;
+        }*/
+
+span {
+    display: block;
+}
+
+div.inline {
+    display: inline;
+}
+.error {
+    color: red;
+}

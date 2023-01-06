@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="CSS/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="mx-5">
+    <form id="frmRegistration">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-6 offset-3 border rounded shadow-sm">
+                    <div class="row p-2">
+                        <div class="col-md-7">
+                            <div class="display-4 mb-2">Registration</div>
+                            <div class="mb-2">
+                                <label class="form-label">Email Id</label>
+                                <input type="email" class="form-control" name="TxtEmailId" id="TxtEmailId" required />
+                                <!--<div class="input-group">
+                                    <input type="text" class="form-control" name="TxtEmailId" id="TxtEmailId" required />
+                                    <span class="input-group-text">@gmail.com</span>
+                                </div>-->
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">First Name</label>
+                                <input type="text" minlength="2" class="form-control" name="TxtFirstName" id="TxtFirstName" required />
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control" name="TxtLastName" id="TxtLastName" required />
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Password</label>
+                                <input type="password" minlength="8" class="form-control" name="TxtPassword" id="TxtPassword" required />
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" name="TxtConfirmPassword" id="TxtConfirmPassword" />
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Gender</label>
+                                <select class="form-select" name="DdlGender" required>
+                                    <option disabled selected>--Select--</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Others</option>
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Mobile No</label>
+                                <input type="text" name="TxtMobileNo" minlength="10" maxlength="10" class="form-control" required />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Select any 2 Technology</label>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input type="checkbox" name="technologies" />
+                                            <label class="form-check-label">ASP.NET</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" name="technologies" />
+                                            <label class="form-check-label">MVC</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" name="technologies" />
+                                            <label class="form-check-label">.NET Core</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input type="checkbox" name="technologies" />
+                                            <label class="form-check-label">SQL Server</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" name="technologies" />
+                                            <label class="form-check-label">Oracle</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" name="technologies" />
+                                            <label class="form-check-label">MySQL</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-outline-dark">Submit</button>
+                                <button type="reset" class="btn btn-outline-danger">Reset</button>
+                            </div>
+                        </div>
+                        <div class="col-md-5 position-relative">
+                            <img src="Images/NewUser.png" class="img-fluid position-absolute start-50 top-50 translate-middle" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+

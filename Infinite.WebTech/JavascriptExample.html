@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #d1 {
+            width:200px;
+            height:200px;
+            border:2px solid;
+        }
+
+        .borderRed{
+            border:2px solid red;
+        }
+    </style>
+    <link rel="icon" href="Images/artificial-intelligence.png" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="mx-3">
+
+    <div class="display-2">Javascript Example</div>
+    <br />
+    <div id="d1" onmouseover="changeBorder()" onmouseout="removeColor()"></div>
+
+    <input type="text" id="txtName" onblur="this.value = this.value.toUpperCase();" />
+    <input type="text" id="txtLastName" onfocus="changeColor()" />
+    <button class="btn btn-primary" onclick="changeColor()">Click Here</button>
+
+    <!--Your script goes here-->
+    <script>
+        //var num1 = 10;
+        //var num2 = 20;
+        //{
+        //    let num3 = num1 + num2;
+        //    document.write("Number :" + num3);
+        //    console.log("Add number :" + num3);
+        //}
+
+        //const price = 10000;
+
+        //document.write("Price :<br>" + price);
+
+        //price = 2000;
+        //document.write("Updated Price :" + price);
+
+        ////Date
+        //var date = new Date();
+        //document.write("Today's Date :" + date);
+        //document.write("<br>Only Date :" + date.toDateString());
+        //document.write("<br>");
+        //document.write("<br>");
+        ////Array
+        //var arr = new Array(1, 2, 3, 4, 5);
+        //var cities = ["Mumbai", "Chennai", "Delhi"];
+        //document.write("Number :" + arr[4]);
+        //document.write("<br>City :" + cities[2])
+        //document.write("<br>");
+        //for (var i = 0; i < arr.length; i++) {
+        //    document.write("<br>Value " + arr[i]);
+        //   // document.write("<br>");
+        //}
+        //document.write("<br>");
+        ////Object
+        //var employee = { Id:1, Name:"Pradeep", Salary:30000 };
+        //document.write("Empoyee Id :" + employee.Id);
+        //document.write("<br>Employee&nbsp;&nbsp;&nbsp;&nbsp; Name :" + employee.Name);
+        //document.write("<br>Employee &emsp; Salary :"+employee.Salary)
+    </script>
+    <script>
+        function method() {
+            var d1 = document.getElementById("d1");
+            d1.innerHTML = "Hello World!!!";
+            //alert(d1.innerHTML);
+
+            var d2 = document.getElementsByClassName("display-2");
+            alert(d2[0].innerHTML);
+        }
+
+        function getName() {
+            method();
+            var txt1 = document.getElementById("txtName");
+            if (txt1.value != "") {
+                alert("Hi, " + txt1.value);
+            }
+            else {
+                alert("Please enter your name");
+            }
+        }
+        document.write("<br>");
+        //Anonymous Function
+        (function (a) {
+            while (a < 10) {
+                document.write(a+"<br>");
+                a++;
+            }
+        })(1);
+
+        function changeColor() {
+            var input = document.getElementById("txtName");
+            //input.style.backgroundColor = "blue";
+            //input.style.color = "white";
+            if (input.value == "") {
+                console.log("Error");
+                input.style.border = "2px solid red";
+            }
+            else {
+                input.style.border = "";
+            }
+        }
+
+        function changeBorder() {            
+            document.getElementById("d1").style.backgroundColor = "red";            
+        }
+
+        function removeColor() {
+            document.getElementById("d1").style.backgroundColor = "white";
+        }
+        
+    </script>
+</body>
+</html>

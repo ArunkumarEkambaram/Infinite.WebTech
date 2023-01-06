@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Zencoding Example</title>
+    <style>
+        /*Class Selector*/
+        .FontSize20_Blue{
+            font-size:20px;
+            color:red;  
+        }
+
+        /*ID Selector*/
+        #TxtDOB{
+            color:#ff0000;
+            font-family:'Agency FB'
+        }
+    </style>
+</head>
+<body>
+    <!--<img src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg" width="300" height="300" />-->
+    <img src="Images/24326036.jpg" width="300" height="300" />
+    <br />
+    <b>Forms Controls</b>
+    
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label>First Name</label>
+                </td>
+                <td>
+                    <input type="text" name="TxtFirstName" required placeholder="Your First Name" class="FontSize20_Blue" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Last Name</label>
+                </td>
+                <td>
+                    <input type="text" name="TxtLastName" placeholder="Your Last Name" class="FontSize20_Blue" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Email Id</label>
+                </td>
+                <td>
+                    <input type="email" name="TxtEmailId" required placeholder="user@webiste.com" class="FontSize20_Blue" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Password</label>
+                </td>
+                <td>
+                    <input type="password" name="TxtPassword" class="FontSize20_Blue" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Date of Birth</label>
+                </td>
+                <td>
+                    <input id="TxtDOB" type="date" name="TxtDOB" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Gender</label>
+                </td>
+                <td>
+                    <select name="DdlGender" class="FontSize20_Blue">
+                        <option>--Select--</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Others</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Work Preferences</label>
+                </td>
+                <td>
+                    <input type="radio" id="RbFullTime" name="preferences"/><label class="FontSize20_Blue">Full-time</label>
+                    <input type="radio" id="RbParttime" name="preferences" class="FontSize20_Blue" />Part-time
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Preferred City</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="ChkPune"  class="FontSize20_Blue"/>Pune
+                    <input type="checkbox" id="ChkMumbai" />Mumbai
+                    <input type="checkbox" id="ChkDelhi" />Delhi
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Upload your resume</label>
+                </td>
+                <td>
+                    <input type="file" name="FileResume" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!--<button>Submit</button>-->
+                    <input type="submit" name="BtnSubmit" value="Register" />
+                </td>
+                <td>
+                    <input type="reset" name="BtnReset" value="Reset" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
